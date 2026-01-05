@@ -25,7 +25,7 @@ let sessionsCompleted = 0; // NEW: Track how many pomodoros finished
 
 const modes = {
     work: 25 * 60,  // 25 minutes
-    short: 5 * 60,  // 5 minutes
+    short: 5 * 60,  // 5 minutes // timer fixed
     long: 15 * 60   // 15 minutes
 };
 
