@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        
+        <header>
+            <h1>Pomodoro Timer</h1>
+        </header>
+
+        <div class="mode-buttons">
+            <button id="work-btn" class="active">Work</button>
+            <button id="short-break-btn">Short Break</button>
+            <button id="long-break-btn">Long Break</button>
+        </div>
+
+        <div class="timer-display">
+            <span id="minutes">25</span>:<span id="seconds">00</span>
+        </div>
+
+        <div class="controls">
+            <button id="start-btn" aria-label="Start Timer">Start</button>
+            <button id="pause-btn" class="hidden" aria-label="Pause Timer">Pause</button>
+            <button id="reset-btn" aria-label="Reset Timer">
+                <i class="fa-solid fa-rotate-right"></i> </button>
+        </div>
+
+        <div class="session-info">
+            Sessions Completed: <span id="session-count">0</span>
+        </div>
+
+    </div>
+
+    <audio id="alarm-sound" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

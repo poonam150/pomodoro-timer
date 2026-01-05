@@ -1,0 +1,114 @@
+/* 1. CSS VARIABLES: The "Settings" for our colors */
+:root {
+    --primary-color: #ba4949; /* Pomodoro Red */
+    --secondary-color: #38858a; /* Break Blue */
+    --dark-color: #2c3e50;
+    --light-color: #ffffff;
+    --bg-color: #eef2f5;
+    --shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* 2. GLOBAL RESET: Remove default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--primary-color); /* Starts with Red */
+    color: var(--dark-color);
+    height: 100vh; /* Full screen height */
+    display: flex;
+    justify-content: center; /* Center Horizontally */
+    align-items: center; /* Center Vertically */
+    transition: background-color 0.5s ease; /* Smooth color change */
+}
+
+/* 3. THE MAIN CARD */
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    width: 90%;
+    max-width: 450px; /* Won't get too wide on desktop */
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 1.5rem;
+}
+
+/* 4. MODE BUTTONS (Work / Break) */
+.mode-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.mode-buttons button {
+    background: none;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 20px;
+    color: #555;
+    transition: all 0.3s ease;
+}
+
+/* This class will be added by JavaScript later */
+.mode-buttons button.active {
+    background-color: rgba(0, 0, 0, 0.15);
+    font-weight: bold;
+    color: black;
+}
+
+/* 5. TIMER DISPLAY (The big numbers) */
+.timer-display {
+    font-size: 6rem;
+    font-weight: bold;
+    color: var(--dark-color);
+    margin: 20px 0;
+}
+
+/* 6. CONTROL BUTTONS (Start / Reset) */
+.controls button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: white;
+    color: var(--primary-color);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.1s ease;
+}
+
+.controls button:active {
+    transform: scale(0.98); /* Button click effect */
+}
+
+#start-btn, #pause-btn {
+    width: 150px;
+    color: var(--primary-color);
+}
+
+/* Utility class to hide elements */
+.hidden {
+    display: none;
+}
+
+/* 7. SESSION INFO */
+.session-info {
+    margin-top: 20px;
+    color: #777;
+    font-size: 0.9rem;
+}
